@@ -132,6 +132,13 @@ table {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/orbitron/v14/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6BoWg2.ttf) format('truetype');
+}
 h1,
 h2,
 h3,
@@ -150,6 +157,13 @@ header {
   word-spacing: 5rem;
   margin-bottom: 1%;
 }
+@media (max-width: 500px) {
+  header {
+    width: 90%;
+    margin-left: 5%;
+    word-spacing: 4.5rem;
+  }
+}
 .firstContainer {
   width: 90%;
   margin: 1% 5%;
@@ -157,10 +171,47 @@ header {
 }
 .firstContainer .firstContainer-content {
   margin: 3%;
+  font-family: 'Orbitron', sans-serif;
 }
 .firstContainer .firstContainer-content .image {
   width: 25%;
 }
 .firstContainer .firstContainer-content .introduction {
   margin-top: 1%;
+}
+.secondContainer {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: lightcyan;
+}
+.secondContainer .box1 {
+  font-family: 'Orbitron', sans-serif;
+  width: 40%;
+  text-align: center;
+  margin: 3%;
+}
+@media (max-width: 500px) {
+  .secondContainer .box1 {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media (max-width: 500px) {
+  .secondContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.thirdContainer {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1%;
+  background-color: lightcyan;
+}
+.thirdContainer .contact {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
 }
