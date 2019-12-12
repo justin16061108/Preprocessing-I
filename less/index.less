@@ -20,9 +20,11 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	max-width: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
+	border: 0.1rem solid grey;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -49,11 +51,49 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+//mixins
+
 * {
     box-sizing: border-box;
 }
+
+.centre(){
+   text-align: center;
+}
+
+h1, h2, h3, h5, h6{
+	font-size: 2rem;
+}
+
+
 
 html, body {
     height: 100%;
 }
 
+
+header{
+  width: 25%;
+  margin-left: 70%;
+  margin-top: 1%;
+  word-spacing: 5rem;
+  margin-bottom: 1%;
+}
+
+.firstContainer{
+	width: 90%;
+	margin: 1% 5%;
+	background-color: lightcyan;
+	
+	.firstContainer-content{
+        margin:3%;
+	  
+		.image{
+		width: 25%;
+	    }
+		.introduction{
+			margin-top: 1%;
+		}
+    
+	}
+}
