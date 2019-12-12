@@ -20,10 +20,13 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	max-width: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
+	border: 0.1rem solid grey;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -49,11 +52,109 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+//mixins
+
 * {
     box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+//variables
+
+@main-color: lightcyan;
+@main-font: 'Orbitron', sans-serif;
+
+
+//mixins
+.centre(){
+   text-align: center;
+}
+
+.flex(){
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+
+
+h1, h2, h3, h5, h6{
+	font-size: 2rem;
+}
+
+
 
 html, body {
     height: 100%;
 }
 
+
+header{
+  width: 25%;
+  margin-left: 70%;
+  margin-top: 1%;
+  word-spacing: 5rem;
+  margin-bottom: 1%;
+
+  @media(max-width: 500px){
+	width: 90%;
+	margin-left: 5%;
+	word-spacing: 4.5rem;
+}
+   
+}
+
+.firstContainer{
+	width: 90%;
+	margin: 1% 5%;
+	background-color: @main-color;
+	
+	.firstContainer-content{
+		margin:3%;
+		font-family: @main-font;
+	  
+		.image{
+		width: 25%;
+	    }
+		.introduction{
+			margin-top: 1%;
+		}
+    
+	}
+}
+
+.secondContainer{
+	width: 90%;
+	margin-left: 5%;
+	.flex();
+	background-color: @main-color;
+
+	.box1{
+		font-family: @main-font;
+		width: 40%;
+		.centre();
+		margin: 3%;
+
+		@media(max-width: 500px){
+			width: 90%;
+			margin-left: 5%;
+		}
+	}
+    @media(max-width: 500px){
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.thirdContainer{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 1%;
+	background-color: @main-color;
+
+	.contact{
+		font-family: @main-font;
+		.centre();
+	}
+}
